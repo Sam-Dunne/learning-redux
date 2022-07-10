@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { incrementByAmount, decrementByAmount } from './redux/counter';
+import IncrementByOne from './components/IncrementByOne';
+import DecrementByOne from './components/DecrementbyOne';
 
 function App() {
+  const { count } = useSelector((state) => state.counter);
+  const [incrementUserValue, setIncrementUserValue] = useState('');
+  const [decrementUserValue, setDecrementUserValue] = useState('');
+  const dispatch = useDispatch();
+  const onChangeIncrement = (e) => {
+    setIncrementUserValue(e.target.value);
+  };
+  const onChangeDecrement = (e) => {
+    setDecrementUserValue(e.target.value);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>The count is: {count}</h1>
+      <IncrementByOne />
+      <DecrementByOne />
+     
+      <div>
+        <input type='number' onChange={onChangeIncrement} value={incrementUserValue} ></input>
+        <button onClick={() => dispatch(incrementByAmount(Number(incrementUserValue)))}>Increment by {incrementUserValue}</button>
+      </div>
+      <div>
+        <input type='number' onChange={onChangeDecrement} value={decrementUserValue} ></input>
+        <button onClick={() => dispatch(decrementByAmount(Number(decrementUserValue)))}>Decrement by {decrementUserValue}</button>
+      </div>
     </div>
   );
 }
