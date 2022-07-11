@@ -1,20 +1,19 @@
-import { useSelector } from 'react-redux';
-import IncrementByOne from './components/IncrementByOne';
-import DecrementByOne from './components/DecrementbyOne';
-import IncrementByUserValue from './components/IncrementByUserValue';
-import DecrementByUserValue from './components/DecrementByUserValue';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './Views/Home';
+import Counter from './Views/Counter';
+
 
 function App() {
-  const { count } = useSelector((state) => state.counter);
 
   return (
-    <div className="App">
-      <h1>The count is: {count}</h1>
-      <IncrementByOne />
-      <DecrementByOne />
-      <IncrementByUserValue />
-      <DecrementByUserValue />
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/counter" element={<Counter />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
