@@ -6,7 +6,7 @@ export default function Navbar() {
         <nav className='container bg-primary w-full' >
 
             <div className='row justify-content-between p-5'>
-                <div classname='col-3'>
+                <div className='col-3'>
                     <Link to='/' className='btn btn-light text-primary'>Rtk Playground</Link>
                 </div>
 
