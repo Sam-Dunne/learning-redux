@@ -14,13 +14,14 @@ export default function ChangeByUserValue() {
   };
 
   return (
+    
     <div className='input-group'>
       <div className='input-group-prepend'>
-        <button onClick={() => dispatch(decrementByAmount(Number(userValue)))} className='btn btn-rounded bg-primary text-light'>Decrement</button>
+        <i className="bi bi-dash-circle col-2 text-primary" onClick={() => dispatch(decrementByAmount(Number(userValue)))}></i>
       </div>
       <input type='number' placeholder='Enter Value' onChange={onChangeIncrement} value={userValue} className='form-control text-center'></input>
-      <div className='input-group-prepend'>
-        <button onClick={() => dispatch(incrementByAmount(Number(userValue)))} className='btn btn-rounded bg-primary text-light'>Increment</button>
+      <div className='input-group-append'>
+        <i className="bi bi-plus-circle col-2 text-primary" onClick={() => dispatch(incrementByAmount(Number(userValue)))}></i>
       </div>
     </div>
   )
