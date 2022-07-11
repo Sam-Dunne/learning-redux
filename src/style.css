@@ -23881,4 +23881,12 @@ fieldset:disabled .btn {
     display: none !important;
   }
 }
+
+/*********************************************/
+/*          CUSTOMIZED DEFAULTS         */
+/*********************************************/
+.card {
+  width: 18em;
+  border-radius: 15px;
+}
 /*# sourceMappingURL=style.css.map */

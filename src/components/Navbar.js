@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     return (
-        <nav className='container bg-primary w-full' >
+        <nav className='container-fluid bg-primary w-full' >
 
             <div className='row justify-content-between p-5'>
                 <div className='col-3'>
