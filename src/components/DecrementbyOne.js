@@ -7,8 +7,8 @@ export default function DecrementbyOne() {
     const dispatch = useDispatch();
 
     return (
-        <div>
-            <button onClick={() => dispatch(decrement())}>Decrement by 1</button>
-        </div>
+        <>
+            <i className="bi bi-dash-circle col-2 text-primary" onClick={() => dispatch(decrement())}></i>
+        </>
     )
 }

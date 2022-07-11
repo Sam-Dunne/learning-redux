@@ -7,8 +7,8 @@ export default function IncrementByOne() {
 
 
     return (
-        <div>
-            <button onClick={() => dispatch(increment())}>Increment by 1</button>
-        </div>
+        <>
+            <i className="bi bi-plus-circle col-2 text-primary" onClick={() => dispatch(increment())}></i>
+        </>
     )
 }

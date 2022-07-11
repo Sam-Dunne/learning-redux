@@ -13,7 +13,7 @@ export default function DecrementByUserValue() {
     return (
         <div>
             <input type='number' onChange={onChangeDecrement} value={decrementUserValue} ></input>
-            <button onClick={() => dispatch(decrementByAmount(Number(decrementUserValue)))}>Decrement by {decrementUserValue}</button>
+            <button onClick={() => dispatch(decrementByAmount(Number(decrementUserValue)))} className='btn btn-rounded bg-primary text-light'>Decrement by {decrementUserValue}</button>
         </div>
     )
 }
