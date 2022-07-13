@@ -1,15 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import CounterCard from '../components/CounterCard';
+import DecrementByOne from './DecrementbyOne';
+import IncrementByOne from './IncrementByOne';
+import ChangeByUserValue from './ChangeByUserValue';
 
-function Counter() {
+export default function CounterCard() {
   const { count } = useSelector((state) => state.counter);
 
   return (
-    <>
-      <section>
-        {/* <div className='card shadow'>
+    <div className='card shadow'>
           <div className="card-body">
             <div className="container">
               <h6 className='text-center mb-2'>Decrement or Increment by 1</h6>
@@ -24,14 +23,6 @@ function Counter() {
 
             <ChangeByUserValue />
           </div>
-        </div> */}
-        <CounterCard />
-      </section>
-      {/* <div className='justify-content-center d-flex'>
-        <Link to="/" className='btn d-inline-block bg-primary text-light'>Home</Link>
-      </div> */}
-    </>
+        </div>
   )
 }
-
-export default Counter
