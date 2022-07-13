@@ -8,7 +8,7 @@ export default function CounterCard() {
   const { count } = useSelector((state) => state.counter);
 
   return (
-    <div className='card shadow'>
+    <div className='card shadow mx-auto'>
           <div className="card-body">
             <div className="container">
               <h6 className='text-center mb-2'>Decrement or Increment by 1</h6>
