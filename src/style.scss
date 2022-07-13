@@ -1,6 +1,14 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 // @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+
+/*********************************************/
+/*             SCSS Variables                */
+/*********************************************/
+$color-primary : rgb(89, 61, 128);
+$color-light : rgb(237, 224, 255);
+
+
 /*********************************************/
 /*          CUSTOMIZED DEFAULTS         */
 /*********************************************/
@@ -12,8 +20,8 @@ sans-serif;
 // $primary: #fafafa;
 // $bg-primary: red;
 $theme-colors: (
-  "primary": rgb(89, 61, 128),
-  "light": rgb(237, 224, 255),
+  "primary": $color-primary,
+  "light": $color-light,
 //   "danger": $danger
 );
 
@@ -62,6 +70,20 @@ footer {
     align-items: center;
     padding: 3em 2em 3em 2em;
     height: 15vh;
+}
+
+.paragraph-wrapper {
+    padding: 1em 12em;
+    text-align: center;
+}
+
+.counter-value-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding : 1em 2em;
+    background-color: $color-light;
+    border-radius: 15px;
 }
 
 
