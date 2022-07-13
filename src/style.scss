@@ -7,6 +7,10 @@
 /*********************************************/
 $color-primary : rgb(89, 61, 128);
 $color-light : rgb(237, 224, 255);
+//    These 3 should total 100vh, later add programmitic control
+$nav-height : 15vh;
+$footer-height: 15vh;
+$section-height: 70vh;
 
 
 /*********************************************/
@@ -41,7 +45,7 @@ $theme-colors: (
 }
 
 .navbar {
-    height: 15vh;
+    height: $nav-height;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +63,7 @@ i {
 
 section {
     padding: 3em 2em 3em 2em;
-    min-height: 70vh;
+    min-height: $section-height;
     height: fit-content;
 
 }
@@ -69,7 +73,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 3em 2em 3em 2em;
-    height: 15vh;
+    height: $footer-height;
 }
 
 .paragraph-wrapper {
