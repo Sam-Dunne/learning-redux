@@ -7,8 +7,8 @@ export default function IncrementByOne() {
 
 
     return (
-        <>
+        <div className='col-2 d-flex justify-content-center'>
             <i className="bi bi-plus-circle col-2 text-primary" onClick={() => dispatch(increment())}></i>
-        </>
+        </div>
     )
 }

@@ -17,7 +17,7 @@ function Counter() {
               <h6 className='text-center mb-2'>Decrement or Increment by 1</h6>
               <div className="row justify-content-center align-items-center my-2">
                 <DecrementByOne />
-                <h3 className='card-title text-primary col-4 text-center m-0'>{count}</h3>
+                <h3 className='card-title text-primary col-3 text-center m-0'>{count}</h3>
                 <IncrementByOne />
               </div>
             </div>
@@ -28,7 +28,9 @@ function Counter() {
           </div>
         </div>
       </section>
-      <Link to="/" className='btn btn-rounded bg-primary text-light'>Home</Link>
+      <div className='justify-content-center d-flex'>
+        <Link to="/" className='btn d-inline-block bg-primary text-light'>Home</Link>
+      </div>
     </>
   )
 }
