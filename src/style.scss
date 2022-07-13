@@ -32,6 +32,13 @@ $theme-colors: (
     margin: 1em auto 1em auto;
 }
 
+.navbar {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*********************************************/
 /*          CUSTOMIZED CSS         */
 /*********************************************/
@@ -47,6 +54,17 @@ section {
     justify-content: center;
     align-items: center;
     padding: 3em 2em 3em 2em;
+    min-height: 70vh;
+    height: fit-content;
+
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 2em 3em 2em;
+    height: 15vh;
 }
 
 

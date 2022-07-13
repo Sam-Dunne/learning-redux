@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     return (
-        <nav className='nav container-fluid bg-primary w-full' >
+        <nav className='navbar bg-primary w-full p-3' >
 
-            <div className='row justify-content-between p-3'>
-                <div className='col-3'>
+            {/* <div className=' p-3'> */}
+                {/* <div className=''> */}
                     <Link to='/' className='btn btn-light text-primary'>Rtk Playground</Link>
-                </div>
+                    <Link to='/counter' className='btn btn-light text-primary'>Counter</Link>
+                {/* </div> */}
 
-            </div>
+            {/* </div> */}
 
       
         </nav>
