@@ -8,7 +8,7 @@ export default function DecrementbyOne() {
 
     return (
         <>
-            <div className='col-2 d-flex justify-content-center'>
+            <div className='flexbox'>
                 <i className="bi bi-dash-circle text-primary" onClick={() => dispatch(decrement())}></i>
             </div>
         </>

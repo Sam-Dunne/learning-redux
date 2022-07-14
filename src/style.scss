@@ -6,11 +6,11 @@
 /*             SCSS Variables                */
 /*********************************************/
 $color-primary : rgb(89, 61, 128);
-$color-light : rgb(237, 224, 255);
+$color-light : rgb(239, 233, 247);
 //    These 3 should total 100vh, later add programmitic control
 $nav-height : 15vh;
-$footer-height: 15vh;
-$section-height: 70vh;
+$footer-height: 12vh;
+$section-height: 75vh;
 
 
 /*********************************************/
@@ -41,19 +41,29 @@ $theme-colors: (
 }
 
 .btn {
-    margin: 1em auto 1em auto;
+    margin: 1em 2em 1em 0;
 }
 
 .navbar {
-    height: $nav-height;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // width: 100%;
+    min-height: $nav-height;
+    height: fit-content;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 }
 
 /*********************************************/
 /*          CUSTOMIZED CSS         */
 /*********************************************/
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+}
 
 i {
     width: fit-content;
@@ -77,7 +87,7 @@ footer {
 }
 
 .paragraph-wrapper {
-    padding: 1em 12em;
+    padding: 1em 8em;
     text-align: center;
 }
 
@@ -88,6 +98,16 @@ footer {
     padding : 1em 2em;
     background-color: $color-light;
     border-radius: 15px;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconLink {
+    height: 3em;
 }
 
 

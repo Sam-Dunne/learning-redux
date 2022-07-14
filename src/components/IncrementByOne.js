@@ -7,7 +7,7 @@ export default function IncrementByOne() {
 
 
     return (
-        <div className='col-2 d-flex justify-content-center'>
+        <div className='flexbox'>
             <i className="bi bi-plus-circle text-primary" onClick={() => dispatch(increment())}></i>
         </div>
     )
