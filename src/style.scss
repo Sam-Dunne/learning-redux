@@ -82,12 +82,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3em 2em 3em 2em;
-    height: $footer-height;
+    padding: 1em 2em 1em 2em;
+    min-height: $footer-height;
+    height: fit-content;
 }
 
 .paragraph-wrapper {
-    padding: 1em 8em;
+    // padding: 1em 8em;
     text-align: center;
 }
 
@@ -107,7 +108,7 @@ footer {
 }
 
 .iconLink {
-    height: 3em;
+    height: 2.5em;
 }
 
 
