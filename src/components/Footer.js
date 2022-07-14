@@ -7,6 +7,7 @@ export default function Footer() {
       <div><a href='https://www.samdunnewebdev.com/' target='blank' className='text-decoration-none'>
         <h6 className='text-light text-center'>Sam Dunne</h6>
       </a>
+      {/* Downloadable PDF Resume */}
         <a href="/2022-07-12 Sam Dunne WebDev Resume.pdf" download="Sam Dunne Resume" className='d-block p-2 text-primary bg-light rounded text-decoration-none'>Download Resume</a>
       </div>
 
