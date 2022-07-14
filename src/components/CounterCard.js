@@ -9,10 +9,10 @@ export default function CounterCard() {
 
   return (
     <div className='card container d-flex w-75 shadow mx-auto'>
-      <div className='row justify-content center'>
+      <div className='row justify-content-center'>
 
         <div className="card-body col-6">
-          <div className="">
+          {/* <div className=""> */}
             <label className='text-center mb-2 mx-auto d-block'>Decrement or Increment by 1</label>
             <div className='container'>
               <div className="row justify-content-center align-items-center my-2">
@@ -20,10 +20,10 @@ export default function CounterCard() {
                 <h3 className='card-title text-primary col-3 text-center m-0'>{count}</h3>
                 <DecrementByOne />
               </div>
-            </div>
+            {/* </div> */}
           </div>
           <h2 className='text-center my-4'>Or</h2>
-          <label className='text-center mb-2 mx-auto d-block'>Enter your value below, then click icons</label>
+          <label className='text-center mb-1 mx-auto d-block'>Enter your value below, then click icons</label>
 
           <ChangeByUserValue />
         </div>
