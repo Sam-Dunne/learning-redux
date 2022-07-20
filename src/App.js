@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Home from './Views/Home';
 import Counter from './Views/Counter';
 import Footer from './components/Footer';
+import Calculator from './Views/Calculator';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/counter" element={<Counter />} />
+        <Route path="/calculator" element={<Calculator />} />
       </Routes>
       <Footer />
     </BrowserRouter>
