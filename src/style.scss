@@ -20,13 +20,13 @@ $section-height: 75vh;
 $body-bg: rgb(241, 236, 246);
 $body-color: #4b4b4b;
 $font-family-sans-serif: "Poppins",
-sans-serif;
+    sans-serif;
 // $primary: #fafafa;
 // $bg-primary: red;
 $theme-colors: (
-  "primary": $color-primary,
-  "light": $color-light,
-//   "danger": $danger
+    "primary": $color-primary,
+    "light": $color-light,
+    //   "danger": $danger
 );
 
 
@@ -59,9 +59,14 @@ $theme-colors: (
 * {
     margin: 0;
     padding: 0;
-  }
+}
+.h2-noMargin {
+    margin-bottom: 0;
+    padding: 0;
+}
 
-  html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -96,7 +101,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding : 1em 2em;
+    padding: 1em 2em;
     background-color: $color-light;
     border-radius: 15px;
 }
@@ -104,6 +109,12 @@ footer {
 .flexbox {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.flexbox-end {
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -132,6 +143,10 @@ footer {
 
 .anchor-noDecor {
     text-decoration: none;
+}
+
+.text-end {
+    text-align: end;
 }
 
 
