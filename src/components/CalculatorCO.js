@@ -5,7 +5,7 @@ import { backspace, setArg1, setArg2, setOperation, calculate } from '../redux/c
 // import ChangeByUserValue from './ChangeByUserValue';
 
 export default function CalculatorCO() {
-    const { arg1, 
+    const { arg1,
         // arg2, result, 
         display, operation } = useSelector((state) => state.calculator);
 
@@ -51,49 +51,62 @@ export default function CalculatorCO() {
                     <div className='bg-light p-3 rounded mb-3'>Result: {result}</div> */}
 
                     {/* calculator display */}
-                    {!display 
-                    ?
-                    <div className='flexbox bg-light p-3 rounded mb-3'><h2 className='h2-noMargin'>Use Number Pad</h2></div>
-                    :        
-                    <div className='flexbox-end bg-light py-3 px-5 rounded mb-3'><h2 className='h2-noMargin'>{display}</h2></div>
+                    {!display
+                        ?
+                        <div className='flexbox bg-light p-3 rounded mb-3'><h2 className='h2-noMargin'>Use Number Pad</h2></div>
+                        :
+                        <div className='flexbox-end bg-light py-3 px-5 rounded mb-3'><h2 className='h2-noMargin'>{display}</h2></div>
                     }
                     {/* numbers area */}
                     <div className='container '>
                         <div className='row d-flex justify-content-between align-items-center'>
-                            <div className='col-9 bg-light px-3 py-4 rounded'>
-                                <div className="row mb-3">
-                                    <div className="d-flex justify-content-around">
-                                        <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 1)}><span className="text-light fs-2">1</span></a>
-                                        <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 2)}><span className="text-light fs-2">2</span></a>
-                                        <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 3)}><span className="text-light fs-2">3</span></a>
+                            <div className='col-9 bg-light px-1 py-4 rounded'>
+                                <div className='container'>
+                                    <div className="row mb-3">
+                                        <div className="d-flex justify-content-around">
+                                            <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 1)}><span className="text-light fs-2">1</span></a>
+                                            <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 2)}><span className="text-light fs-2">2</span></a>
+                                            <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 3)}><span className="text-light fs-2">3</span></a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="row mb-3">
-                                    <div className="d-flex justify-content-around">
-                                        <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 4)}><span className="text-light fs-2">4</span></a>
-                                        <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 5)}><span className="text-light fs-2">5</span></a>
-                                        <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 6)}><span className="text-light fs-2">6</span></a>
-                                    </div>
-                                </div>
-                                <div className="row mb-3">
-                                    <div className="d-flex justify-content-around">
-                                        <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 7)}><span className="text-light fs-2">7</span></a>
-                                        <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 8)}><span className="text-light fs-2">8</span></a>
-                                        <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 9)}><span className="text-light fs-2">9</span></a>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="d-flex justify-content-around">
-                                        <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary text-light fw-bolder" onClick={(e) => handleArgClick(e, '.')}>.</a>
-                                        <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 0)}><span className="text-light fs-2">0</span></a>
+                                <div className='container'>
 
-                                        {/* Conditional render of Backspace Button */}
-                                        {!arg1
-                                            ?
-                                            <div className="circle bg-light"></div>
-                                            :
-                                            <a href="/" className="mouse-pointer anchor-noDecor circle bg-light" onClick={(e) => handleDispatch(e, 'backspace', "")}><i className="backspace-fudge bi bi-backspace fs-1 text-primary d-block" ></i></a>
-                                        }
+                                    <div className="row mb-3">
+                                        <div className="d-flex justify-content-around">
+                                            <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 4)}><span className="text-light fs-2">4</span></a>
+                                            <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 5)}><span className="text-light fs-2">5</span></a>
+                                            <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 6)}><span className="text-light fs-2">6</span></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div className='container'>
+
+                                    <div className="row mb-3">
+                                        <div className="d-flex justify-content-around">
+                                            <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 7)}><span className="text-light fs-2">7</span></a>
+                                            <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 8)}><span className="text-light fs-2">8</span></a>
+                                            <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 9)}><span className="text-light fs-2">9</span></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div className='container'>
+
+                                    <div className="row">
+                                        <div className="d-flex justify-content-around">
+                                            <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary text-light fw-bolder" onClick={(e) => handleArgClick(e, '.')}>.</a>
+                                            <a href="/" className="mouse-pointer anchor-noDecor circle bg-primary shadow-sm" onClick={(e) => handleArgClick(e, 0)}><span className="text-light fs-2">0</span></a>
+
+                                            {/* Conditional render of Backspace Button */}
+                                            {!arg1
+                                                ?
+                                                <div className="circle bg-light"></div>
+                                                :
+                                                <a href="/" className="mouse-pointer anchor-noDecor circle bg-light" onClick={(e) => handleDispatch(e, 'backspace', "")}><i className="backspace-fudge bi bi-backspace fs-1 text-primary d-block" ></i></a>
+                                            }
+                                        </div>
                                     </div>
                                 </div>
 

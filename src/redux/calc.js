@@ -77,7 +77,7 @@ export const calcSlice = createSlice({
                     state.arg1 = state.result.toString();
                     break;
                 case "-":
-                    state.result = Math.floor(Number(state.arg1)) - Math.floor(Number(state.arg2));
+                    state.result = (Number(state.arg1)) - (Number(state.arg2));
                     state.display = state.result.toString();
                     state.arg1 = '';
                     state.operation = '';

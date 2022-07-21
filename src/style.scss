@@ -10,7 +10,7 @@ $color-light : rgb(237, 233, 243);
 //    These 3 should total 100vh, later add programmitic control
 $nav-height : 15vh;
 $footer-height: 12vh;
-$section-height: 75vh;
+$section-height: 72vh;
 
 
 /*********************************************/
@@ -101,7 +101,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1em 2em;
+    // padding: 1em 2em;
     background-color: $color-light;
     border-radius: 15px;
 }
