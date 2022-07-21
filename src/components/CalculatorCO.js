@@ -1,60 +1,83 @@
-// import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { backspace, setArg1, setArg2, setOperation, calculate } from '../redux/calc';
 // import DecrementByOne from './DecrementbyOne';
 // import IncrementByOne from './IncrementByOne';
 // import ChangeByUserValue from './ChangeByUserValue';
 
 export default function CalculatorCO() {
-    // const { count } = useSelector((state) => state.counter);
+    const { arg1, arg2, result, display, operation } = useSelector((state) => state.calculator);
+
+    const dispatch = useDispatch();
+
+    const handleArgClick = (val) => {
+        if (!operation) {
+            dispatch(setArg1(val));
+            return;
+        }
+
+        dispatch(setArg2(val));
+    };
+
+    const handleCalculate = () => {
+        dispatch(calculate())
+    }
+
+    
 
     return (
         <div className='container'>
             <div className='row d-flex justify-content-center'>
                 <div className='col-md-6 col-lg-4 bg-primary p-4 rounded shadow'>
                     {/* calculator display */}
+                    <div className='bg-light p-3 rounded mb-3'>Arg1: {arg1}</div>
+                    <div className='bg-light p-3 rounded mb-3'>Op: {operation}</div>
+                    <div className='bg-light p-3 rounded mb-3'>Arg2: {arg2}</div>
+                    <div className='bg-light p-3 rounded mb-3'>Result: {result}</div>
+                    <div className='bg-light p-3 rounded mb-3'>display: {display}</div>
                     <div className='bg-light p-3 rounded mb-3'>Input display</div>
                     {/* numbers area */}
                     <div className='container '>
-                        <div className='row d-flex justify-content-between'>
-                            <div className='col-9 bg-light p-3 rounded'>
+                        <div className='row d-flex justify-content-between align-items-center'>
+                            <div className='col-9 bg-light px-3 py-5 rounded'>
                                 <div className="row mb-3">
                                     <div className="d-flex justify-content-around">
-                                        <div className="circle bg-primary"><span className="text-light fs-2">1</span></div>
-                                        <div className="circle bg-primary"><span className="text-light fs-2">2</span></div>
-                                        <div className="circle bg-primary"><span className="text-light fs-2">3</span></div>
+                                        <div className="circle bg-primary" onClick={() => handleArgClick(1)}><span className="text-light fs-2">1</span></div>
+                                        <div className="circle bg-primary" onClick={() => handleArgClick(2)}><span className="text-light fs-2">2</span></div>
+                                        <div className="circle bg-primary" onClick={() => handleArgClick(3)}><span className="text-light fs-2">3</span></div>
                                     </div>
                                 </div>
                                 <div className="row mb-3">
                                     <div className="d-flex justify-content-around">
-                                        <div className="circle bg-primary"><span className="text-light fs-2">4</span></div>
-                                        <div className="circle bg-primary"><span className="text-light fs-2">5</span></div>
-                                        <div className="circle bg-primary"><span className="text-light fs-2">6</span></div>
+                                        <div className="circle bg-primary" onClick={() => handleArgClick(4)}><span className="text-light fs-2">4</span></div>
+                                        <div className="circle bg-primary" onClick={() => handleArgClick(5)}><span className="text-light fs-2">5</span></div>
+                                        <div className="circle bg-primary" onClick={() => handleArgClick(6)}><span className="text-light fs-2">6</span></div>
                                     </div>
                                 </div>
                                 <div className="row mb-3">
                                     <div className="d-flex justify-content-around">
-                                        <div className="circle bg-primary"><span className="text-light fs-2">7</span></div>
-                                        <div className="circle bg-primary"><span className="text-light fs-2">8</span></div>
-                                        <div className="circle bg-primary"><span className="text-light fs-2">9</span></div>
+                                        <div className="circle bg-primary" onClick={() => handleArgClick(7)}><span className="text-light fs-2">7</span></div>
+                                        <div className="circle bg-primary" onClick={() => handleArgClick(8)}><span className="text-light fs-2">8</span></div>
+                                        <div className="circle bg-primary" onClick={() => handleArgClick(9)}><span className="text-light fs-2">9</span></div>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="d-flex justify-content-around">
-                                        <div className="circle bg-light"></div>
-                                        <div className="circle bg-primary"><span className="text-light fs-2">0</span></div>
-                                        <div className="circle bg-light"></div>
-                                        {/* <div className="circle bg-primary"><span className="text-light fs-2">9</span></div> */}
+                                        <div className="circle bg-primary text-light fw-bolder" onClick={() => handleArgClick('.')}>.</div>
+                                        <div className="circle bg-primary" onClick={() => handleArgClick(0)}><span className="text-light fs-2">0</span></div>
+                                
+                                        {/* <div className="circle bg-light"></div> */}
+                                        <div className="circle bg-light"><i className="backspace-fudge bi bi-backspace fs-1 text-primary d-block" onClick={() => dispatch(backspace())}></i></div>
                                     </div>
                                 </div>
                                
                             </div>
                             {/* action area */}
-                            <div className='col-2 bg-light p-2 rounded'>
-                                <i className="bi bi-plus-circle text-primary mx-auto my-2 d-block"></i>
-                                <i className="bi bi-dash-circle text-primary mx-auto my-2 d-block"></i>
-                                <i className="bi bi-x-circle text-primary mx-auto my-2 d-block"></i>
-                                <i className="bi bi-slash-circle text-primary mx-auto my-2 d-block"></i>
-                                <i className="bi bi-backspace text-primary mx-auto my-2 d-block"></i>
-                                <i className="bi bi-arrow-return-left text-primary mx-auto d-block"></i>
+                            <div className='col-2 bg-light px-2 py-4 rounded'>
+                                <i className="bi bi-plus-circle fs-2 text-primary mx-auto my-1 d-block" onClick={() => dispatch(setOperation('+'))}></i>
+                                <i className="bi bi-dash-circle fs-2 text-primary mx-auto my-1 d-block" onClick={() => dispatch(setOperation('-'))}></i>
+                                <i className="bi bi-x-circle fs-2 text-primary mx-auto my-1 d-block" onClick={() => dispatch(setOperation('x'))}></i>
+                                <i className="bi bi-slash-circle fs-2 text-primary mx-auto my-1 d-block" onClick={() => dispatch(setOperation('/'))}></i>
+                                <i className="bi bi-arrow-return-left fs-2 text-primary mx-auto d-block" onClick={() => handleCalculate()}></i>
                             </div>
                         </div>
                     </div>
