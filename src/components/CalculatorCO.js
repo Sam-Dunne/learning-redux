@@ -66,7 +66,12 @@ export default function CalculatorCO() {
                                         <div className="circle bg-primary" onClick={() => handleArgClick(0)}><span className="text-light fs-2">0</span></div>
                                 
                                         {/* <div className="circle bg-light"></div> */}
+                                        {!arg1 
+                                        ?
+                                        <div className="circle bg-light"></div>
+                                        :
                                         <div className="circle bg-light"><i className="backspace-fudge bi bi-backspace fs-1 text-primary d-block" onClick={() => dispatch(backspace())}></i></div>
+                                     }
                                     </div>
                                 </div>
                                
