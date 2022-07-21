@@ -41,36 +41,36 @@ export default function CalculatorCO() {
                             <div className='col-9 bg-light px-3 py-5 rounded'>
                                 <div className="row mb-3">
                                     <div className="d-flex justify-content-around">
-                                        <div className="circle bg-primary" onClick={() => handleArgClick(1)}><span className="text-light fs-2">1</span></div>
-                                        <div className="circle bg-primary" onClick={() => handleArgClick(2)}><span className="text-light fs-2">2</span></div>
-                                        <div className="circle bg-primary" onClick={() => handleArgClick(3)}><span className="text-light fs-2">3</span></div>
+                                        <a href="javascript:;" className="mouse-pointer anchor-noDecor circle bg-primary" onClick={() => handleArgClick(1)}><span className="text-light fs-2">1</span></a>
+                                        <a href="javascript:;" className="mouse-pointer anchor-noDecor circle bg-primary" onClick={() => handleArgClick(2)}><span className="text-light fs-2">2</span></a>
+                                        <a href="javascript:;" className="mouse-pointer anchor-noDecor circle bg-primary" onClick={() => handleArgClick(3)}><span className="text-light fs-2">3</span></a>
                                     </div>
                                 </div>
                                 <div className="row mb-3">
                                     <div className="d-flex justify-content-around">
-                                        <div className="circle bg-primary" onClick={() => handleArgClick(4)}><span className="text-light fs-2">4</span></div>
-                                        <div className="circle bg-primary" onClick={() => handleArgClick(5)}><span className="text-light fs-2">5</span></div>
-                                        <div className="circle bg-primary" onClick={() => handleArgClick(6)}><span className="text-light fs-2">6</span></div>
+                                        <a href="javascript:;" className="mouse-pointer anchor-noDecor circle bg-primary" onClick={() => handleArgClick(4)}><span className="text-light fs-2">4</span></a>
+                                        <a href="javascript:;" className="mouse-pointer anchor-noDecor circle bg-primary" onClick={() => handleArgClick(5)}><span className="text-light fs-2">5</span></a>
+                                        <a href="javascript:;" className="mouse-pointer anchor-noDecor circle bg-primary" onClick={() => handleArgClick(6)}><span className="text-light fs-2">6</span></a>
                                     </div>
                                 </div>
                                 <div className="row mb-3">
                                     <div className="d-flex justify-content-around">
-                                        <div className="circle bg-primary" onClick={() => handleArgClick(7)}><span className="text-light fs-2">7</span></div>
-                                        <div className="circle bg-primary" onClick={() => handleArgClick(8)}><span className="text-light fs-2">8</span></div>
-                                        <div className="circle bg-primary" onClick={() => handleArgClick(9)}><span className="text-light fs-2">9</span></div>
+                                        <a href="javascript:;" className="mouse-pointer anchor-noDecor circle bg-primary" onClick={() => handleArgClick(7)}><span className="text-light fs-2">7</span></a>
+                                        <a href="javascript:;" className="mouse-pointer anchor-noDecor circle bg-primary" onClick={() => handleArgClick(8)}><span className="text-light fs-2">8</span></a>
+                                        <a href="javascript:;" className="mouse-pointer anchor-noDecor circle bg-primary" onClick={() => handleArgClick(9)}><span className="text-light fs-2">9</span></a>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="d-flex justify-content-around">
-                                        <div className="circle bg-primary text-light fw-bolder" onClick={() => handleArgClick('.')}>.</div>
-                                        <div className="circle bg-primary" onClick={() => handleArgClick(0)}><span className="text-light fs-2">0</span></div>
+                                        <a href="javascript:;" className="mouse-pointer anchor-noDecor circle bg-primary text-light fw-bolder" onClick={() => handleArgClick('.')}>.</a>
+                                        <a href="javascript:;" className="mouse-pointer anchor-noDecor circle bg-primary" onClick={() => handleArgClick(0)}><span className="text-light fs-2">0</span></a>
                                 
                                         {/* <div className="circle bg-light"></div> */}
                                         {!arg1 
                                         ?
                                         <div className="circle bg-light"></div>
                                         :
-                                        <div className="circle bg-light"><i className="backspace-fudge bi bi-backspace fs-1 text-primary d-block" onClick={() => dispatch(backspace())}></i></div>
+                                        <a href="javascript:;" className="mouse-pointer anchor-noDecor circle bg-light" onClick={() => dispatch(backspace())}><i className="backspace-fudge bi bi-backspace fs-1 text-primary d-block" ></i></a>
                                      }
                                     </div>
                                 </div>
@@ -78,11 +78,11 @@ export default function CalculatorCO() {
                             </div>
                             {/* action area */}
                             <div className='col-2 bg-light px-2 py-4 rounded'>
-                                <i className="bi bi-plus-circle fs-2 text-primary mx-auto my-1 d-block" onClick={() => dispatch(setOperation('+'))}></i>
-                                <i className="bi bi-dash-circle fs-2 text-primary mx-auto my-1 d-block" onClick={() => dispatch(setOperation('-'))}></i>
-                                <i className="bi bi-x-circle fs-2 text-primary mx-auto my-1 d-block" onClick={() => dispatch(setOperation('x'))}></i>
-                                <i className="bi bi-slash-circle fs-2 text-primary mx-auto my-1 d-block" onClick={() => dispatch(setOperation('/'))}></i>
-                                <i className="bi bi-arrow-return-left fs-2 text-primary mx-auto d-block" onClick={() => handleCalculate()}></i>
+                                <a href="javascript:;" className="mouse-cursor" onClick={() => dispatch(setOperation('+'))}><i className="bi bi-plus-circle fs-2 text-primary mx-auto my-1 d-block" ></i></a>
+                                <a href="javascript:;" className="mouse-cursor" onClick={() => dispatch(setOperation('-'))}><i className="bi bi-dash-circle fs-2 text-primary mx-auto my-1 d-block" ></i></a>
+                                <a href="javascript:;" className="mouse-cursor" onClick={() => dispatch(setOperation('x'))}> <i className="bi bi-x-circle fs-2 text-primary mx-auto my-1 d-block" ></i></a>
+                                <a href="javascript:;" className="mouse-cursor" onClick={() => dispatch(setOperation('/'))}><i className="bi bi-slash-circle fs-2 text-primary mx-auto mt-1 mb-4 d-block" ></i></a>
+                                <a href="javascript:;" className="mouse-cursor" onClick={() => handleCalculate()}><i className="bi bi-arrow-return-left fs-2 text-primary mx-auto d-block" ></i></a>
                             </div>
                         </div>
                     </div>
