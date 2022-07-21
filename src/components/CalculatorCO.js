@@ -34,7 +34,7 @@ export default function CalculatorCO() {
                     <div className='bg-light p-3 rounded mb-3'>Arg2: {arg2}</div>
                     <div className='bg-light p-3 rounded mb-3'>Result: {result}</div>
                     <div className='bg-light p-3 rounded mb-3'>display: {display}</div>
-                    <div className='bg-light p-3 rounded mb-3'>Input display</div>
+                    {/* <div className='bg-light p-3 rounded mb-3'>Input display</div> */}
                     {/* numbers area */}
                     <div className='container '>
                         <div className='row d-flex justify-content-between align-items-center'>
