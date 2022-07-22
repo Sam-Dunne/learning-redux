@@ -10,7 +10,7 @@ $color-light : rgb(237, 233, 243);
 //    These 3 should total 100vh, later add programmitic control
 $nav-height : 15vh;
 $footer-height: 12vh;
-$section-height: 72vh;
+$section-height: 75vh;
 
 
 /*********************************************/
@@ -68,6 +68,7 @@ $theme-colors: (
 html,
 body {
     height: 100%;
+    width: 100%;
 }
 
 i {
